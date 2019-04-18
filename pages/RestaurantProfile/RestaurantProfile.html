@@ -1,0 +1,14 @@
+<StackLayout style="background-color: lightblue;">
+    <Label text="Restaurant Profile"></Label>
+    <ListView class = 'list-group'[items] = "restaurantDisplay"(itemTap)="onItemTap($event)">
+      <ng-template let-item='item'>
+        <StackLayout class= 'list-group-item'>
+          <Label [text]='item' style= 'font-size: 20px'>   
+          </Label>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+    <Button text="Back" id="BackBtn"(tap)= onTapBack()></Button>
+    <Button text = 'Request Update'></Button>
+    <Button text = 'Search restaurant' (tap) = onTapSearch()></Button>
+</StackLayout>

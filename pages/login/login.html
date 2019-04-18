@@ -1,0 +1,28 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Label class="header" text="Quick Eats"></Label>
+
+		<StackLayout class="input-field">
+			<TextField class="input" hint="Email" keyboardType="email"  [(ngModel)]='emailAddress' ></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+		<StackLayout class="input-field">
+			<TextField  class="input" hint="Password" KeyboardType = "password" secure='true' [(ngModel)]='password' ></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+
+		<Button text="Sign in" id = "signInBtn"(tap)=onTapSignIn() class="btn btn-primary m-t-20"></Button>
+
+		<StackLayout class = "bottom">
+
+		<label text= "Don’t have an account? Sign up" id = "registerBtn"(tap)= onTapRegister()></label>
+		</StackLayout>
+
+	</StackLayout>
+
+	
+		
+	
+</FlexboxLayout>

@@ -1,0 +1,61 @@
+
+
+    <FlexboxLayout class="page">
+            <StackLayout class="form">
+                <Label class="header" text="Quick Eats"></Label>
+        
+                <StackLayout class="input-field">
+                    <TextField class="input" id="FirstNameFld" hint="First Name" [(ngModel)] ='firstName'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <TextField class="input" id="LastNameFld" hint="Last Name"[(ngModel)] ='lastName'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                 </StackLayout>
+
+                <StackLayout class="input-field">
+                     <TextField class="input" id="emailFld" hint="Email"[(ngModel)] ='email'></TextField>
+                     <StackLayout class="hr-light"></StackLayout>
+                 </StackLayout>
+
+                 <StackLayout class="input-field">
+                    <TextField class="input" id="PasswordFld" hint="Password"secure ="true"[(ngModel)] ='password'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                 <StackLayout class="input-field">
+                    <TextField class="input" id="ConfirmPasswordFld" hint="Confirm Password"secure ="true"[(ngModel)] ='confirmPassword'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <TextField class="input" id="CountryFld" hint="Country"[(ngModel)] ='country'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <TextField class="input" id="StateFld" hint="State"[(ngModel)] ='state'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <TextField class="input" id="CityFld" hint="City"[(ngModel)] ='city'></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+  
+        
+        
+                <Button text="Sign Up" id = "SignUpBtn"(tap)=onTapReg() class="btn btn-primary m-t-20"></Button>
+
+                <StackLayout class = "bottom">
+                <label text="Back" id = "BackBtn"(tap)=onTapBack() class="btn btn-secondary m-t-20"></label>
+                </StackLayout>
+    
+        
+            </StackLayout>
+        
+            
+                
+            
+        </FlexboxLayout>

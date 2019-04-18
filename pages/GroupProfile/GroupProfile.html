@@ -1,0 +1,46 @@
+<ActionBar title = 'Group Profile'></ActionBar>
+<StackLayout style="background-color: lightblue;">
+    <Label  text= "{{groupName}} "style='font-size:40px'></Label>
+    <Label text="Preferences" style= 'font-size: 30px'></Label>
+    
+    <ListView class = 'list-group'[items] = "preferencesDisplay">
+            <ng-template let-item='item'>
+              <StackLayout class= 'list-group-item'>
+                <Label [text]='item' style= 'font-size: 20px'>   
+                </Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>
+          <Label text = "Members"  style= 'font-size: 30px'></Label>
+          <ListView class = 'list-group'[items] = "groupsDisplay">
+                <ng-template let-item='item'>
+                  <StackLayout class= 'list-group-item'>
+                    <Label [text]='item' style= 'font-size: 20px'>   
+                    </Label>
+                  </StackLayout>
+                </ng-template>
+              </ListView>
+    <Button text="Back" id="BackBtn"(tap)= onTapBack()></Button>
+    <StackLayout orientation = 'horizontal'>
+        <Button text = 'Add Members' (tap) = onTapAddMembers()></Button>
+        <Button text = 'Add Preferences'(tap) = onTapAddPreferences()></Button>
+   
+
+    </StackLayout>
+    
+    <StackLayout orientation = 'vertical'>
+        <Label text = 'Top Preferences'style= 'font-size: 30px'></Label>
+        <ScrollView>
+            
+            <ListView class = 'list-group'[items] = "preferencesDisplay" height ='100px'>
+                <ng-template let-item='item'>
+                  <StackLayout class= 'list-group-item'>
+                    <Label [text]='item' style= 'font-size: 20px'>   
+                    </Label>
+                  </StackLayout>
+                </ng-template>
+              </ListView>
+       
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>

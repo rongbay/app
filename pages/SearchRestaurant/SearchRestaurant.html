@@ -1,0 +1,48 @@
+<StackLayout style="background-color: lightblue;">
+    <Label  text= "Search by Name "style='font-size:15px'></Label>
+<SearchBar row="0" hint="Enter restaurant name" (clear)="onClear($event)" (submit)="onSubmit($event)"></SearchBar>
+<ListView row="1" [items]="myItems" class="list-group">
+    <ng-template let-item="item">
+        
+       
+        <GridLayout class="item list-group-item">
+            <Label [text]="item" class="list-group-item-heading" ></Label>
+        </GridLayout>
+    
+        
+    </ng-template>
+</ListView>
+
+
+
+    <Label  text= " Search by Tag "style='font-size:15px'></Label>
+<SearchBar row="5" hint="Enter restaurant tag" (clear)="onClear($event)" (submit)="onSubmit($event)"></SearchBar>
+<ListView row="1" [items]="myItems" class="list-group">
+    <ng-template let-item="item">
+        
+       
+        <GridLayout class="item list-group-item">
+            <Label [text]="item" class="list-group-item-heading" ></Label>
+        </GridLayout>
+    
+        
+    </ng-template>
+</ListView>
+
+<Label  text= " Search by Business info"style='font-size:15px'></Label>
+<SearchBar row="5" hint="Enter restaurant info" (clear)="onClear($event)" (submit)="onSubmit($event)"></SearchBar>
+<ListView row="1" [items]="myItems" class="list-group">
+    <ng-template let-item="item">
+        
+       
+        <GridLayout class="item list-group-item">
+            <Label [text]="item" class="list-group-item-heading" ></Label>
+        </GridLayout>
+    
+        
+    </ng-template>
+</ListView>
+
+
+<Button text="Back" id="BackBtn"(tap)= onTapBack() ></Button>
+</StackLayout>

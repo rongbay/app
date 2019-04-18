@@ -1,0 +1,33 @@
+<StackLayout  style="background-color: lightblue;">
+    <Button text = 'Back' (tap) = onTapBack()></Button>
+    <Label text='My Preferences'style= 'font-size: 30px'></Label>
+    <StackLayout>
+
+      <ScrollView>
+        <ListView class = 'list-group'[items] = "preferencesDisplay" height = '300px'>
+            <ng-template let-item='item'>
+              <StackLayout class= 'list-group-item'>
+                <Label [text]='item' style= 'font-size: 25px'>   
+                </Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>   
+        </ScrollView> 
+
+          <Label text= 'My top Preferences'style= 'font-size: 30px'></Label>
+
+          <ScrollView>
+          <ListView class = 'list-group'[items] = "preferencesDisplay" height = '300px'>
+            <ng-template let-item='item'>
+              <StackLayout class= 'list-group-item'>
+                <Label [text]='item' style= 'font-size: 25px'>   
+                </Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>
+        </ScrollView>  
+
+          <Button text = 'Add' (tap) = onTapAdd()></Button>
+          <Button text = 'Test' (tap) = onTapTest()></Button>
+    </StackLayout>
+</StackLayout> 

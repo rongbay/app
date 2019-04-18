@@ -1,0 +1,67 @@
+<ActionBar title = 'Restaurant Information'></ActionBar>
+<StackLayout style="background-color: lightblue;">
+    <Label  text= "{{restaurantName}} "style='font-size:30px'></Label>
+   
+   
+    <Label text="Address" style= 'font-size: 20px'></Label>
+    <ScrollView orientation = "horizontal" sdkExampleTitle sdkToggleNavButton>
+    <ListView class = 'list-group'[items] = "addressDisplay">
+            <ng-template let-item='item'>
+              <StackLayout class= 'list-group-item'>
+                <Label [text]='item' style= 'font-size: 15px'>   
+                </Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>
+        </ScrollView>
+          <Label text = "Phone number"  style= 'font-size: 20px'></Label>
+          <ListView class = 'list-group'[items] = "phoneDisplay">
+                <ng-template let-item='item'>
+                  <StackLayout class= 'list-group-item'>
+                    <Label [text]='item' style= 'font-size: 15px'>   
+                    </Label>
+                  </StackLayout>
+                </ng-template>
+              </ListView>
+              <Label text = "Open hours"  style= 'font-size: 20px'></Label>
+    <ScrollView height = "50" sdkExampleTitle sdkToggleNavButton>
+              <ListView class = 'list-group'[items] = "hoursDisplay">
+                    <ng-template let-item='item'>
+                      <StackLayout class= 'list-group-item'>
+                        <Label [text]='item' style= 'font-size: 15px'>   
+                        </Label>
+                      </StackLayout>
+                    </ng-template>
+                </ListView>
+    </ScrollView>
+                  <Label text = "Business info"  style= 'font-size: 20px'></Label>
+    <ScrollView height = "50" sdkExampleTitle sdkToggleNavButton>
+                  <ListView class = 'list-group'[items] = "InfoDisplay">
+                        <ng-template let-item='item'>
+                          <StackLayout class= 'list-group-item'>
+                            <Label [text]='item' style= 'font-size: 15px'>   
+                            </Label>
+                          </StackLayout>
+                        </ng-template>
+                      </ListView>
+    </ScrollView>
+                 <Label text = "Tags"  style= 'font-size: 20px'></Label>
+    <ScrollView height = "50" sdkExampleTitle sdkToggleNavButton>
+                  <ListView class = 'list-group'[items] = "TagDisplay">
+                        <ng-template let-item='item'>
+                          <StackLayout class= 'list-group-item'>
+                            <Label [text]='item' style= 'font-size: 15px'>   
+                            </Label>
+                          </StackLayout>
+                        </ng-template>
+                      </ListView>
+    </ScrollView>
+    
+        
+    <Button text="Back" id="BackBtn"(tap)= onTapBack() ></Button>
+    <Button text = 'Assign Tag' (tap) =  onTapBack()></Button>
+    <Button text = 'Remove Tag'(tap) =  onTapBack()></Button>
+      
+     
+
+</StackLayout>

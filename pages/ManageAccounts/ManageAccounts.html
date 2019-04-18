@@ -1,0 +1,22 @@
+<StackLayout style="background-color: lightblue;">
+<Button text="Back" id="BackBtn"(tap)= onTapBack()></Button>
+<Label text = 'Search Accounts'style= 'font-size: 20px'></Label>
+<SearchBar hint="UserName" [text]="searchPhrase" (textChange)="onTextChanged($event)" (submit)="onSubmit($event)" 
+color="white" textFieldBackgroundColor="red" textFieldHintColor="white"></SearchBar>
+
+<!--<TextField hint = 'UserName' [(ngModel)] ='searchTarget'></TextField>-->
+<!--<Button text="Search" id="BackBtn"(tap)= onTapSearch()></Button>-->
+<Label text="Target Users"style= 'font-size: 20px' ></Label>
+<ListView class = 'list-group'[items] = "foundTargets" (itemTap)="onItemTap($event)">
+  <ng-template let-item='item'>
+    <StackLayout class= 'list-group-item'>
+      <Label [text]='item'>   
+      </Label>
+    </StackLayout>
+  </ng-template>
+</ListView>
+<StackLayout orientation = 'Horizontal'>
+  <Button text = 'Disable' (tap) = 'onTapDisable()'></Button>
+  <Button text ='Delete' (tap) = 'onTapDelete()'></Button>
+</StackLayout>
+</StackLayout>

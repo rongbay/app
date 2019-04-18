@@ -1,0 +1,73 @@
+.page {
+    width:auto; 
+    height: auto;
+    margin: auto;
+    }
+    .form {
+      margin-left: auto;
+      margin-right: auto;
+      flex-grow: 2;
+      vertical-align: middle;
+    }
+    
+  
+    
+    .header {
+      text-align: center;
+      font-size: 60;
+      font-weight: 600;
+      margin-bottom: 30;
+      text-align: center;
+      color: rgb(223, 132, 13);
+    }
+  
+    .bottom {
+      text-align: center;
+      margin-bottom: 1;
+      text-align: center;
+      
+    }
+    
+    .input-field {
+      margin-bottom: -35;
+    }
+    .input {
+      font-size: 18;
+      color: rgb(17, 12, 12);
+    }
+    
+    .btn-primary {
+      height: 50;
+      margin: 30 5 15 5;
+      background-color: rgb(221, 133, 17);
+      border-radius: 5;
+      font-size: 20;
+      font-weight: 600;
+    }
+    .btn-secondary {
+        height: 30;
+        margin: 15 5 15 5;
+        background-color: rgb(221, 133, 17);
+        border-radius: 5;
+        font-size: 20;
+        font-weight: 600;
+      }
+    .login-label {
+      text-align: center;
+      color: #A8A8A8;
+      font-size: 16;
+    }
+    .sign-up-label {
+      margin-bottom: 20;
+    }
+    .bold {
+      color: #000000; 
+    }
+  
+  
+  
+  
+  
+  
+  
+  

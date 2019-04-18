@@ -1,0 +1,13 @@
+<StackLayout>
+    <Button text= 'Back' id = 'viewGroupsBtn' (tap) = onTapBack()></Button> 
+    <Button text= 'Create A New Group' (tap) = onTapCreateGroup()></Button>
+    <Label text = 'MyGroups'style= 'font-size: 30px' ></Label>
+    <ListView class = 'list-group'[items] = "groupsDisplay"(itemTap)="onItemTap($event)">
+            <ng-template let-item='item'>
+              <StackLayout class= 'list-group-item'>
+                <Label [text]='item' style= 'font-size: 20px'>   
+                </Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>
+    </StackLayout>

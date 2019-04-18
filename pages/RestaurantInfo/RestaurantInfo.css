@@ -1,0 +1,28 @@
+.my-button {
+    background-color: orangered;
+    border-radius: 2;
+    color: white;
+    font-family: FontAwesome;
+    font-size: 20;
+    align-items: left;
+    width: 40%;
+    height: 40%;
+}
+
+.my-button1 {
+    background-color: orangered;
+    border-radius: 2;
+    color: white;
+    font-family: FontAwesome;
+    font-size: 20;
+    align-items: right;
+    width: 40%;
+    height: 40%;
+}
+
+
+
+.my-button:active {
+    background-color: lightslategray;
+    color:white;
+}

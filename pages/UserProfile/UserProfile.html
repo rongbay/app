@@ -1,0 +1,58 @@
+<Page>
+   <StackLayout>
+    <ScrollView  style="background-color: black;" >      
+    <StackLayout  style="background-color: lightblue;" >
+      <Button text= "Test" [(ngModel)] ='testBtn' (tap)= onTapTest()></Button>
+      <label text="UserProfile"  style= 'font-size: 30px' [(ngModel)] ='NameLabel'></label>
+      <Label text ="My Preferences" style= 'font-size: 25px'></Label>
+
+      <ListView class = 'list-group'[items] = "preferences">
+      <ng-template let-item='item'>
+        <StackLayout class= 'list-group-item'>
+          <Label [text]='item' style= 'font-size: 20px'>   
+          </Label>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+
+      <Label text="MyGroups" style= 'font-size: 25px' ></Label>
+      <ListView class = 'list-group'[items] = "groupsDisplay" (itemTap)="onItemTap($event)">
+        <ng-template let-item='item' >
+          <StackLayout class= 'list-group-item'>
+            <Label [text]='item'style= 'font-size: 20px'>   
+            </Label>
+          </StackLayout>
+        </ng-template>
+      </ListView>
+
+      <Button text="Back" id="BackBtn"(tap)= onTapBack()></Button>
+      <!--<Button text= 'View Groups' id = 'viewGroupsBtn' (tap) = onTapGroupBtn()></Button> -->
+    </StackLayout>
+    </ScrollView>
+
+    <!--Begin DRAWER-->
+    <!--<RadSideDrawer tkExampleTitle tkToggleNavButton>-->
+        <StackLayout tkDrawerContent class="sideStackLayout">
+            <StackLayout class="sideTitleStackLayout">
+                <Label text="Navigation Menu"></Label>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout class="sideStackLayout">
+                    <Label text="Home" class="sideLabel" (tap)= 'onHomeTap()'></Label>
+                    <Label text="Manage My Groups" class="sideLabel sideLightGrayLabel"(tap)='onGroupTap()'></Label>
+                    <Label text="Manage My Preferences" class="sideLabel" (tap)= 'onManagePrefsTap()'></Label>
+                    <Label text="Edit My Info" class="sideLabel"></Label>     
+                    <Label text='Feedback' class= 'sideLabel'(tap) = onTapFeedback()></Label>    
+                    <Label text="Close Drawer" color="black" padding="10"  (tap)="onCloseDrawerTap()"></Label>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout tkMainContent>
+            <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+            <Button text="OPEN DRAWER" (tap)="openDrawer()" class="drawerContentButton"></Button>
+        </StackLayout>
+    <!--</RadSideDrawer>-->
+    <!--END DRAWER-->
+  </StackLayout>
+
+    </Page>
