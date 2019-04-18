@@ -1,0 +1,17 @@
+
+Page {
+    background-color: lightblue;
+    font-size:  15;
+}
+
+TextField {
+    padding: 10;
+    font-size:13 ; 
+}
+
+StackLayout{
+    margin-left: 30;
+    margin-right:30;
+    padding-bottom: 15;
+    background-color: white;
+}
